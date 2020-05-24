@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<!--
+This is an HTML document. It contains information about how elements in the website
+are arranged. In other words, it describes the layout of a website.
+
+I can't wait to see the resumes you put together!
+
+Cameron Pittman, Udacity Course Developer
+-->
+
+<!--
+The <head> of a website generally links to important resources the page will
+need to load. You'll see a lot of <link>s to CSS files for styles and
+<scripts> for JavaScript files to build interactions.
+-->
+<html>
+<head>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Resume</title>
+
+  <!-- Load the page styles. -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
+  <!--
+  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
+  -->
+<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <div id="main">
+
+
+    <!--
+    Everything from here to the <script> tag below is the skeleton of your
+    website. Your code will add information to each of the sections of the
+    resume below. You can pretty easily figure out what each section will
+    display by looking at the id or at what's written between the <h2> tags.
+    -->
+    <div id="header" class="center-content clear-fix">
+      <ul id="topContacts" class="flex-box"></ul>
+    </div>
+    <div style="clear: both;"></div>
+    <div id="workExperience" class="gray">
+      <h2>Work Experience</h2>
+      <h3><b>Cybersecurity Intern</b></h3>
+      <h4><i>LGMS Sdn Bhd, Selangor, Malaysia</i> | March 2019-June 2019</h4>
+      <h4>
+      	<ul id="list1">
+      		<li>Assist in Office Arcade System Installation with 1000++ arcade games, including design and development</li>
+      		<li>POC Hacking Sonoff Smart Switch</li>
+      		<li>Assisted in validating Penetration Testing report and simple forensic log analysis</li>
+          <a href="https://www.linkedin.com/in/chew-yong-shan-023b5aaa/detail/treasury/position:1438310015/?entityUrn=urn%3Ali%3Afsd_profileTreasuryMedia%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1585972256722)&parentEntityUrn=urn%3Ali%3Afsd_profilePosition%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1438310015)&section=position%3A1438310015&treasuryCount=1&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2B%2Fv8OAwYSbeF3BKH1fukQw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-treasury_thumbnail_cell">Report</a>
+      	</ul>
+      </h4>
+
+
+      <h3><b>Web Developer Intern</b></h3>
+      <h4><i>Eble Tech Sdn Bhd, Melaka, Malaysia | August 2018-November 2018</i></h4>
+      <h4>
+        <ul id="list1">
+          <li>Assisted in deploying an online admin panel for “Helplaa”, an Android application intended to allow people to seek help from helpers or volunteers</li>
+          <li>Obtained Bronze (team effort) in Category C-STA/SPIN in MMU Research Innovation Commercialization and Entrepreneurship Showcase (RICES) 2018</li>
+          <a href="https://www.linkedin.com/in/chew-yong-shan-023b5aaa/detail/treasury/position:1384130645/?entityUrn=urn%3Ali%3Afsd_profileTreasuryMedia%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1590228590444)&parentEntityUrn=urn%3Ali%3Afsd_profilePosition%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1384130645)&section=position%3A1384130645&treasuryCount=1&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2B%2Fv8OAwYSbeF3BKH1fukQw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-treasury_thumbnail_cell">Report</a>
+        </ul>
+      </h4>
+    </div>
+
+    <div id="projects">
+      <h2>Projects</h2>
+      <h3><b>Human Activity Recognition Using Accelerometer Data</b></h3>
+      <h4><i>MMU Final Year Project</i> | July 2019–March 2020</h4>
+      <h4>
+        <ul id="list1">
+          <li>This research focuses on developing a fusion of CNN and RNN model to gain a deeper insight into HAR, coupled with the improvement of its classification accuracy.Furthermore, the widespread use of self-collected data and multimodal sensor data has been questionable as they are not convenient to use and some results may be biased. Therefore, this research used two widely accepted public datasets which are the UCI and WISDM datasets to evaluate the proposed model. This research also has evaluated the effect of hyperparameter on the performance of the model.</li>
+          <a href="https://github.com/harrychew/Human-Activity-Recognition-Using-Accelerometer-Data">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Digital Signature Implementation using Python</b></h3>
+      <h4><i>Course Assignment</i> | July 2019–October 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>Digital Signature Implementation using Tkinter Python, using asymmetric encryption and RSA algorithm</li>
+          <a href="https://github.com/harrychew/Digital-Signature-Implementation">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Home Loan Mortgage Approval System using Expert System</b></h3>
+      <h4><i>Course Assignment</i> | July 2019–October 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>Our paper presents the works of designing an expert system that aims to assist the bank agents in approving home loan mortgage. There are many criteria to be considered when deciding whether to approve or reject an application of home loan. C Language Integrated Production System (CLIPS) is used as a tool for designing this expert system. The expert system takes inputs from the users and generates the final output according to the rules.</li>
+          <a href="https://github.com/harrychew/Home-Loan-Mortgage-Approval-using-Expert-System">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Airflight booking using XML, DTD, XSL</b></h3>
+      <h4><i>Course Assignment</i> | July 2019–October 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>Airflight booking using XML, DTD, and XLS, including logical view</li>
+          <a href="https://github.com/harrychew/Airflight-booking-XML-DTD-XSL">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>JNI Application</b></h3>
+      <h4><i>Course Assignment</i> | July 2019–October 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>JNI application that enables Java application to interact with C library</li>
+          <a href="https://github.com/harrychew/JNI-Application">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Brute Force Password</b></h3>
+      <h4><i>Course Assignment</i> | January 2019–March 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>Brute force hash values generated by MD5, DES, SHA-256, and SHA-512 using Bash Script</li>
+          <a href="https://github.com/harrychew/Brute-Force-Password">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Kid Preschool Learning System</b></h3>
+      <h4><i>Course Assignment</i> | January 2019–March 2019</h4>
+      <h5>
+        <ul id="list1">
+          <li>Kids Preschool Learning System that bring convenient for children to learn more about simple alphabets and numbers by playing the learning section and quiz</li>
+          <a href="https://github.com/harrychew/Kid-Preschool-Learning-System">Visit project</a>
+        </ul>
+      </h5>
+
+      <h3><b>Octoprop</b></h3>
+      <h4><i>Course Assignment</i> | January 2019–March 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>Interface design for Octoprop, a proposed online rental platform using Adobe XD, design guideline following Material Design</li>
+          <a href="https://github.com/harrychew/Octoprop">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Admin Panel for Helplaa App</b></h3>
+      <h4><i>Eble Tech Sdn Bhd</i> | August 2018–Jan 2019</h4>
+      <h4>
+        <ul id="list1">
+          <li>Designing a website application Admin Panel for HELPLAA Android app, coordinating the backend development for the apps using PHP, MySQL, Javascript. Mapping helpers, shop owners and users.</li>
+          <a href="https://github.com/harrychew/Admin-Panel">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Personal Wallet Application (collaborated)</b></h3>
+      <h4><i>Course Assignment</i> | July 2018–October 2018</h4>
+      <h4>
+        <ul id="list1">
+          <li>Creating a responsive personal wallet apps, including the concept of data sorting algorithm using C++ such as bubble sort, quick sort and insertion sort, also applying the concept of binary tree, stack and queue</li>
+          <a href="https://github.com/harrychew/Personal-Wallet">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Pharmacy Inventory Management System</b></h3>
+      <h4><i>Course Assignment</i> | July 2018–October 2018</h4>
+      <h4>
+        <ul id="list1">
+          <li>Implementing OOP concept using Java to create a simple and user-friendly Pharmacy Inventory Management System. It allows different functions including storing data, calculating expenses, keeping tracking the storage level, etc.</li>
+          <a href="https://github.com/harrychew/Pharmacy-Inventory-System-Management">Visit project</a>
+        </ul>
+      </h4>
+
+      <h3><b>Employee Management System (collaborated)</b></h3>
+      <h4><i>Course Assignment</i> | July 2017–October 2017</h4>
+      <h4>
+        <ul id="list1">
+          <li>An efficient, user-friendly and cost-effective employee management system using standard C++ programming language to record, edit, retrieve, add and delete employee data record.</li>
+          <li>Allow employer to easily monitor the data and information of their employee</li>
+          <li>Allow great flexibility to maintain and control work force</li>
+          <li>Transition traditional “pencil and paper” system to a more modern and effective approach in managing employee data</li>
+          <a href="https://github.com/harrychew/Employee-Management-System">Visit project</a>
+        </ul>
+      </h4>
+
+
+
+    </div>
+    <div id="education" class="gray">
+      <h2>Education</h2>
+      <h3><b>Bachelor of Information Technology (Hons.) Security Technology</b></h3>
+      <h4><i>Multimedia University, Melaka, Malaysia</i> | June 2016–June 2020</h4>
+      <h4>
+        <ul id="list1">
+          <li><u>GPA</u>: 4.0, <u>CGPA</u>: 3.99</li>
+          <li><u>Final Year Project</u>: Human Action Recognition using Accelerometer Data (Research-based)</li>
+          <li><u>Research paper</u> titled ‘Deep Analysis for Smartphone-based Human Activity Recognition’ accepted to be part of the International Conference on Information and Communication Technology (ICoICT) 2020 Conference</li>
+          <li><u>Clubs and Societies</u>: Wing Chun Do Club (Presidents and Assistant Coach), Martial Art Workshop 1.0 (Event Director), Korean Culture Festival (Logistic Leader)</li>
+          <li>Certified Ethical Hacker (EC-Council)</li>
+          <li>Faculty Dean-list Award Recipient (2017-2020)</li>
+          <a href="https://github.com/harrychew/Employee-Management-System">Visit project</a>
+        </ul>
+      </h4>
+    </div>
+    <div id="mapDiv">
+      <h2>Professional Certificate</h2>
+      <h3><b>Certified Ethical Hacker</b></h3>
+      <h4><i>EC-Council</i> | Issued December 2019, Expired December 2022</h4>
+      <h4>
+        <ul id="list1">
+          <li>Credential ID: ECC9147028365</li>
+          <a href="https://drive.google.com/file/d/1QDmODmhh5y99ihzgmRD5-tTjYX-2t25F/view?usp=sharing">See Credential</a>
+        </ul>
+      </h4>
+
+      <h3><b>Computer Security and Systems Management Specialization</b></h3>
+      <h4><i>Coursera</i> | Issued May 2020</h4>
+      <h4>
+        <ul id="list1">
+          <li>Credential ID: YHCPN2HVZ7JU</li>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/YHCPN2HVZ7JU">See Credential</a>
+        </ul>
+      </h4>
+    </div>
+    <div id="lets-connect" class="dark-gray">
+      <h2 class="orange center-text">Let's Connect</h2>
+        <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
+  </div>
+
+  <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
+  https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
+
+   <!-- "Javascript assets, by default, tend to block any other parallel downloads from occurring. So, you can imagine if you have plenty of <script> tags in the head, calling on multiple external scripts will block the HTML from loading, thus greeting the user with a blank white screen, because no other content on your page will load until the JS files have completely loaded."
+    http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
+
+    <!--
+  jQuery is a common JavaScript library for reading and making changes to the
+  Document Object Model (DOM). The DOM is a tree that contains information
+  about what is actually visible on a website.
+
+  While HTML is a static document, the browser converts HTML to the
+  DOM and the DOM can change. In fact, JavaScript's power comes from
+  its ability to manipulate the DOM, which is essentially a JavaScript
+  object. When JavaScript makes something interesting happen on a
+  website, it's likely the action happened because JavaScript changed
+  the DOM. jQuery is fast and easy to use, but it doesn't do anything
+  you can't accomplish with vanilla (regular) JavaScript.
+  -->
+  <script src="js/jQuery.js"></script>
+
+  <!-- More on helper.js in the class -->
+  <script src="js/helper.js"></script>
+
+  <!--
+  The next line tells the browser where to download the JavaScript file you'll be
+  writing. In resumeBuilder.js, you'll be writing code that builds the resume
+  dynamically when this website, index.html, is opened.
+  -->
+  <script src="js/resumeBuilder.js"></script>
+
+
+ 
+
+  <script>
+   
+
+
+   
+  </script>
+</body>
+</html>
