@@ -25,17 +25,10 @@ var bio = {
 		"Microsoft Office","WireShark and Nmap", "Metasploit, Burpsuite","Keras Python","Armitage"
 	],
 	"bioPic": "images/me.jpeg", 
-	"profile":"A Final Year IT Student, currently seeking an Entry-level Information Security Analyst or Consultant position. Good fundamental concepts of various information security systems such as firewall, IDS/IPS, anti-virus etc., familiar with various programming languages and networking. Certified Ethical Hacker with good analytical skill and familiar with various cybersecurity and OSINT tools such as Nmap, Metasploit, BurpSuite, Netcat, Maltego etc.  Planning on taking additional professional certification like OSCP and CISSP. On top of the IT security background, have fairly practical experience with AI deep learning research for Final Year Project, proposing a theoretical framework combining CNN and Bidir-LSTM to improve human activity recognition using two publicly available datasets, scoring above 87% and 90% accuracy.  A growth-oriented team-player with good time management and communication skill, and value professional integrity above all.";
+	"profile":"A Final Year IT Student, currently seeking an Entry-level Information Security Analyst or Consultant position. Good fundamental concepts of various information security systems such as firewall, IDS/IPS, anti-virus etc., familiar with various programming languages and networking. Certified Ethical Hacker with good analytical skill and familiar with various cybersecurity and OSINT tools such as Nmap, Metasploit, BurpSuite, Netcat, Maltego etc.  Planning on taking additional professional certification like OSCP and CISSP. On top of the IT security background, have fairly practical experience with AI deep learning research for Final Year Project, proposing a theoretical framework combining CNN and Bidir-LSTM to improve human activity recognition using two publicly available datasets, scoring above 87% and 90% accuracy.  A growth-oriented team-player with good time management and communication skill, and value professional integrity above all.",
 
 };
-if(bio.interpersonalSkills.length > 0){
-  $("#header").append(HTMLinterpersonalskillsStart);
-  for(var i=0;i<bio.interpersonalSkills.length;i++){
-    var formattedInterpersonalSkills = HTMLinterpersonalskills.replace("%data",bio.interpersonalSkills[i]);
-    $("#interpersonal-skills").append(formattedInterpersonalSkills);
-  }
-  
-}
+
 
 var work = {
 	"companies":[
@@ -63,9 +56,6 @@ var work = {
 	]
 };
 
-for(company in work.companies){
-	$(#workExperience).append()
-}
 
 
 
@@ -95,8 +85,8 @@ var proj_cat=[
 	"Course Final Year Project",
 	"Course Assignment",
 	"Eble Tech Sdn Bhd"
-]
-var github ="https://github.com/harrychew/"
+];
+var github ="https://github.com/harrychew/";
 
 var project = {
 	"projects":[
@@ -106,14 +96,14 @@ var project = {
 			"period":"July 2019–March 2020",
 			"detail":"This research focuses on developing a fusion of CNN and RNN model to gain a deeper insight into HAR, coupled with the improvement of its classification accuracy.Furthermore, the widespread use of self-collected data and multimodal sensor data has been questionable as they are not convenient to use and some results may be biased. Therefore, this research used two widely accepted public datasets which are the UCI and WISDM datasets to evaluate the proposed model. This research also has evaluated the effect of hyperparameter on the performance of the model.",
 			"projectLink":github+"Human-Activity-Recognition-Using-Accelerometer-Data"
-		}
+		},
 		{
 			"projectName":"Digital Signature Implementation using Python",
 			"projectCategory": proj_cat[1],
 			"period":"July 2019–October 2019",
 			"detail":"Digital Signature Implementation using Tkinter Python, using asymmetric encryption and RSA algorithm",
 			"projectLink":github+"Digital-Signature-Implementation"		
-		}
+		},
 		{
 			"projectName":"Home Loan Mortgage Approval System using Expert System",
 			"projectCategory": proj_cat[1],
@@ -121,69 +111,68 @@ var project = {
 			"detail":"Our paper presents the works of designing an expert system that aims to assist the bank agents in approving home loan mortgage. There are many criteria to be considered when deciding whether to approve or reject an application of home loan. C Language Integrated Production System (CLIPS) is used as a tool for designing this expert system. The expert system takes inputs from the users and generates the final output according to the rules.",
 			"projectLink":github+"Home-Loan-Mortgage-Approval-using-Expert-System"
 
-		}
+		},
 		{
 			"projectName":"Airflight booking using XML, DTD, XSL",
 			"projectCategory": proj_cat[1],
 			"period":"July 2019–October 2019",
 			"detail":"Airflight booking using XML, DTD, and XLS, including logical view",
 			"projectLink":github+"Airflight-booking-XML-DTD-XSL"
-		}
+		},
 		{
 			"projectName":"JNI Application",
 			"projectCategory": proj_cat[1],
 			"period":"July 2019–October 2019",
 			"detail":"JNI application that enables Java application to interact with C library",
-			"projectLink":github"JNI-Application"
-		}
+			"projectLink":github+"JNI-Application"
+		},
 		{
 			"projectName":"Brute Force Password",
 			"projectCategory": proj_cat[1],
 			"period":"January 2019–March 2019",
 			"detail":"Brute force hash values generated by MD5, DES, SHA-256, and SHA-512 using Bash Script",
 			"projectLink":github+"Brute-Force-Password"
-		}
+		},
 		{
 			"projectName":"Kid Preschool Learning System",
 			"projectCategory": proj_cat[1],
 			"period":"January 2019–March 2019",
 			"detail":"Kids Preschool Learning System that bring convenient for children to learn more about simple alphabets and numbers by playing the learning section and quiz",
 			"projectLink":github+"Kid-Preschool-Learning-System"
-		}
+		},
 		{
 			"projectName":"Octoprop",
 			"projectCategory": proj_cat[1],
 			"period":"January 2019–March 2019",
 			"detail":"Interface design for Octoprop, a proposed online rental platform using Adobe XD, design guideline following Material Design",
-			"projectLink":github"Octoprop"
-		}
+			"projectLink":github+"Octoprop"
+		},
 		{
 			"projectName":"Admin Panel for Helplaa App",
 			"projectCategory": proj_cat[2],
 			"period":"August 2018–Jan 2019",
 			"detail":"Designing a website application Admin Panel for HELPLAA Android app, coordinating the backend development for the apps using PHP, MySQL, Javascript. Mapping helpers, shop owners and users.",
 			"projectLink":github+"Admin-Panel"
-		}
+		},
 		{
 			"projectName":"Personal Wallet Application (collaborated)",
 			"projectCategory": proj_cat[1],
 			"period":"July 2018–October 2018",
 			"detail":"Creating a responsive personal wallet apps, including the concept of data sorting algorithm using C++ such as bubble sort, quick sort and insertion sort, also applying the concept of binary tree, stack and queue",
 			"projectLink":github+"Personal-Wallet"
-		}
+		},
 		{
 			"projectName":"Pharmacy Inventory Management System",
 			"projectCategory": proj_cat[1],
 			"period":"July 2018–October 2018",
 			"detail":"Implementing OOP concept using Java to create a simple and user-friendly Pharmacy Inventory Management System. It allows different functions including storing data, calculating expenses, keeping tracking the storage level, etc.",
 			"projectLink":github+"Pharmacy-Inventory-System-Management"
-		}
+		},
 		{
 			"projectName":"Employee Management System (collaborated)",
 			"projectCategory": proj_cat[1],
 			"period":"July 2017–October 2017",
-			"detail":"An efficient, user-friendly and cost-effective employee management system using standard C++ programming language to record, edit, retrieve, add and delete employee data record. Allow employer to easily monitor the data and information of their employee, Allow great flexibility to maintain and control work force, Transition traditional “pencil and paper” system to a more modern and effective approach in managing employee data"
-
+			"detail":"An efficient, user-friendly and cost-effective employee management system using standard C++ programming language to record, edit, retrieve, add and delete employee data record. Allow employer to easily monitor the data and information of their employee, Allow great flexibility to maintain and control work force, Transition traditional “pencil and paper” system to a more modern and effective approach in managing employee data",
 			"projectLink":github+"Employee-Management-System"
 		}
 	]
@@ -200,4 +189,18 @@ var charEscape = function(_html) {
     return newHTML;
 };
 console.log(charEscape(html));*/
+bio.display = function(){
+	$("#header").append(HTMLinterpersonalskillsStart);
+	if(bio.interpersonalSkills.length > 0){
+	  for(var i=0;i<bio.interpersonalSkills.length;i++){
+	    var formattedInterpersonalSkills = HTMLinterpersonalskills.replace("%data%",bio.interpersonalSkills[i]);
+	    $("#skills").append(formattedInterpersonalSkills);
+	  }
+	}
+};
+
+bio.display();
+
+  
+
 
