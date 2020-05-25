@@ -5,11 +5,13 @@ var role = "IT Graduate";
 var formattedRole = HTMLheaderRole.replace("%data%", role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);*/
-
+var data="%data%";
 var bio = {
-	"name": "CHEW YONG SHAN",
+	"name": "Chew Yong Shan",
 	"role": "IT Graduate",
 	"city": "Batu Berendam",
+	"biopic": "images/me.jpeg", 
+	"profile":"A Final Year IT Student, currently seeking an Entry-level Information Security Analyst or Consultant position. Good fundamental concepts of various information security systems such as firewall, IDS/IPS, anti-virus etc., familiar with various programming languages and networking. Certified Ethical Hacker with good analytical skill and familiar with various cybersecurity and OSINT tools such as Nmap, Metasploit, BurpSuite, Netcat, Maltego etc.  Planning on taking additional professional certification like OSCP and CISSP. On top of the IT security background, have fairly practical experience with AI deep learning research for Final Year Project, proposing a theoretical framework combining CNN and Bidir-LSTM to improve human activity recognition using two publicly available datasets, scoring above 87% and 90% accuracy.  A growth-oriented team-player with good time management and communication skill, and value professional integrity above all.",
 	"contacts":{
 		"mobile": "+60166403392",
 		"email": "chewys96@gmail.com",
@@ -24,10 +26,43 @@ var bio = {
 	"computingSkills":[
 		"Microsoft Office","WireShark and Nmap", "Metasploit, Burpsuite","Keras Python","Armitage"
 	],
-	"bioPic": "images/me.jpeg", 
-	"profile":"A Final Year IT Student, currently seeking an Entry-level Information Security Analyst or Consultant position. Good fundamental concepts of various information security systems such as firewall, IDS/IPS, anti-virus etc., familiar with various programming languages and networking. Certified Ethical Hacker with good analytical skill and familiar with various cybersecurity and OSINT tools such as Nmap, Metasploit, BurpSuite, Netcat, Maltego etc.  Planning on taking additional professional certification like OSCP and CISSP. On top of the IT security background, have fairly practical experience with AI deep learning research for Final Year Project, proposing a theoretical framework combining CNN and Bidir-LSTM to improve human activity recognition using two publicly available datasets, scoring above 87% and 90% accuracy.  A growth-oriented team-player with good time management and communication skill, and value professional integrity above all.",
-
+	
 };
+
+bio.display = function(){
+	if(bio.interpersonalSkills.length > 0 && bio.computingSkills.length > 0 ){
+
+		$("#header").append(HTMLinterpersonalskillsStart);
+		for(var i=0;i<bio.interpersonalSkills.length;i++){
+			var formattedInterpersonalSkills = HTMLinterpersonalskills.replace(data,bio.interpersonalSkills[i]);
+			$("#computing-skills").append(formattedInterpersonalSkills);
+		}
+		$("#header").append(HTMLcomputingskillsStart);
+	  	for(var j=0;j<bio.computingSkills.length;j++){
+	    	var formattedComputingSkills = HTMLcomputingskills.replace(data,bio.computingSkills[j]);
+	    	$("#interpersonal-skills").append(formattedComputingSkills);
+	  	}
+	}
+	
+	var formattedcontactMobile = HTMLmobile.replace(data, bio.contacts.mobile);
+	var formattedcontactEmail = HTMLemail.replace(data, bio.contacts.email);
+	var formattedcontactGithub = HTMLgithub.replace(data, bio.contacts.github);
+	var formattedcontactTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
+	var formattedcontactLocation = HTMLlocation.replace(data, bio.contacts.location);
+	var formattedcontactInfo = formattedcontactMobile + formattedcontactEmail + formattedcontactGithub + formattedcontactTwitter + formattedcontactLocation;
+	$("#topContacts, #footerContacts").append(formattedcontactInfo);
+
+	var formattedName = HTMLheaderName.replace(data, bio.name);
+	var formattedRole = HTMLheaderRole.replace(data, bio.role);
+	var formattedbioPic = HTMLbioPic.replace(data, bio.biopic);
+	var formattedWelcomeMessage = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
+	var formattedProfileMessage = HTMLprofileMsg.replace(data, bio.profile);
+	formattedbioInfo = formattedName + formattedRole + formattedbioPic;
+	$("#header").prepend(formattedbioInfo);
+	$("#header").append(formattedWelcomeMessage);
+	$("#header").append(formattedProfileMessage);
+};
+
 
 
 var work = {
@@ -189,15 +224,6 @@ var charEscape = function(_html) {
     return newHTML;
 };
 console.log(charEscape(html));*/
-bio.display = function(){
-	$("#header").append(HTMLinterpersonalskillsStart);
-	if(bio.interpersonalSkills.length > 0){
-	  for(var i=0;i<bio.interpersonalSkills.length;i++){
-	    var formattedInterpersonalSkills = HTMLinterpersonalskills.replace("%data%",bio.interpersonalSkills[i]);
-	    $("#skills").append(formattedInterpersonalSkills);
-	  }
-	}
-};
 
 bio.display();
 
