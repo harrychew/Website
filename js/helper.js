@@ -26,18 +26,18 @@ var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLprofileMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLinterpersonalskillsStart = '<h3 id="skills-h3">Interpersonal Skills :</h3><ul id="interpersonal-skills" class="flex-column"></ul>';
+var HTMLinterpersonalskillsStart = '<div><h3 id="skills-h3">Interpersonal Skills :</h3><ul id="interpersonal-skills" class="flex-column"></ul></div>';
 var HTMLinterpersonalskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
-var HTMLcomputingskillsStart = '<h3 id="skills-h3">Computing Skills:</h3><ul id="computing-skills" class="flex-column"></ul>';
+var HTMLcomputingskillsStart = '<div><h3 id="skills-h3">Computing Skills:</h3><ul id="computing-skills" class="flex-column"></ul></div>';
 var HTMLcomputingskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkPosition = ' - %data%</a>';
+var HTMLworkPeriod = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkResponsibility = '<li>%data%</li>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';

@@ -35,13 +35,14 @@ bio.display = function(){
 		$("#header").append(HTMLinterpersonalskillsStart);
 		for(var i=0;i<bio.interpersonalSkills.length;i++){
 			var formattedInterpersonalSkills = HTMLinterpersonalskills.replace(data,bio.interpersonalSkills[i]);
-			$("#computing-skills").append(formattedInterpersonalSkills);
+			$("#interpersonal-skills").append(formattedInterpersonalSkills);
 		}
-		$("#header").append(HTMLcomputingskillsStart);
+		/*may separate out, come back later*/
+		/*$("#header").append(HTMLcomputingskillsStart);
 	  	for(var j=0;j<bio.computingSkills.length;j++){
 	    	var formattedComputingSkills = HTMLcomputingskills.replace(data,bio.computingSkills[j]);
-	    	$("#interpersonal-skills").append(formattedComputingSkills);
-	  	}
+	    	$("#computing-skills").append(formattedComputingSkills);
+	  	}*/
 	}
 	
 	var formattedcontactMobile = HTMLmobile.replace(data, bio.contacts.mobile);
@@ -68,9 +69,10 @@ bio.display = function(){
 var work = {
 	"companies":[
 		{
-			"postion":"Cybersecurity Intern",
-			"employer":"LGMS Sdn Bhd, Selangor, Malaysia",
+			"position":"Cybersecurity Intern",
+			"employer":"LGMS Sdn Bhd",
 			"period": "March 2019-June 2019",
+			"location": "Selangor, Malaysia",
 			"responsibility":[
 			"Assist in Office Arcade System Installation with 1000++ arcade games, including design and development",
 			"POC Hacking Sonoff Smart Switch",
@@ -79,8 +81,9 @@ var work = {
 			"reportLink":"https://www.linkedin.com/in/chew-yong-shan-023b5aaa/detail/treasury/position:1438310015/?entityUrn=urn%3Ali%3Afsd_profileTreasuryMedia%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1585972256722)&parentEntityUrn=urn%3Ali%3Afsd_profilePosition%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1438310015)&section=position%3A1438310015&treasuryCount=1&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2B%2Fv8OAwYSbeF3BKH1fukQw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-treasury_thumbnail_cell"
 		},
 		{
-			"postion":"Web Developer Intern",
-			"employer":"Eble Tech Sdn Bhd, Melaka, Malaysia",
+			"position":"Web Developer Intern",
+			"employer":"Eble Tech Sdn Bhd",
+			"location":"Melaka, Malaysia",
 			"period": "August 2018-November 2018",
 			"responsibility":[
 			"Assisted in deploying an online admin panel for “Helplaa”, an Android application intended to allow people to seek help from helpers or volunteers",
@@ -90,6 +93,26 @@ var work = {
 		}
 	]
 };
+
+work.display = function() {
+    work.companies.forEach(function(company) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedEmployer = HTMLworkEmployer.replace(data, company.employer);
+        var formattedPosition = HTMLworkPosition.replace(data, company.position);
+        var formattedworkPeriod = HTMLworkPeriod.replace(data, company.period);
+        var formattedworkLocation = HTMLworkLocation.replace(data, company.location);
+        var formattedEmployerInfo = formattedEmployer + formattedPosition + formattedworkPeriod + formattedworkLocation;
+        $(".work-entry:last").prepend(formattedEmployerInfo);
+        if(company.responsibility.length > 0 ){
+			for(var i=0;i<company.responsibility.length;i++){
+        		var formattedworkResponsibility = HTMLworkResponsibility.replace(data, company.responsibility[i]);
+        		$(".work-entry:last").append(formattedworkResponsibility);
+        	}
+        }
+
+    });
+};
+
 
 
 
@@ -226,6 +249,7 @@ var charEscape = function(_html) {
 console.log(charEscape(html));*/
 
 bio.display();
+work.display();
 
   
 
