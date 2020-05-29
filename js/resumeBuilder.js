@@ -109,6 +109,8 @@ work.display = function() {
         		$(".work-entry:last").append(formattedworkResponsibility);
         	}
         }
+        var formattedworkreportLink = HTMLworkreportLink.replace(data,company.reportLink);
+        $(".work-entry:last").append(formattedworkreportLink);
 
     });
 };
@@ -128,9 +130,9 @@ var education = {
 			"accomplishment":[
 			"GPA: 4.0, CGPA: 3.99",
 			"Final Year Project: Human Action Recognition using Accelerometer Data (Research-based)",
-			"Research paper titled ‘Deep Analysis for Smartphone-based Human Activity Recognition’ accepted to be part of the International Conference on Information and Communication Technology (ICoICT) 2020 Conference",
+			"Research paper titled Deep Analysis for Smartphone-based Human Activity Recognition accepted to be part of the International Conference on Information and Communication Technology (ICoICT) 2020 Conference",
 			"Clubs and Societies: Wing Chun Do Club (Presidents and Assistant Coach), Martial Art Workshop 1.0 (Event Director), Korean Culture Festival (Logistic Leader)",
-			"Certified Ethical Hacker (EC-Council",
+			"Certified Ethical Hacker (EC-Council)",
 			"Faculty Dean-list Award Recipient (2017-2020)"
 			],
 			"reportLink":"https://www.linkedin.com/in/chew-yong-shan-023b5aaa/detail/treasury/education:391015753/?entityUrn=urn%3Ali%3Afsd_profileTreasuryMedia%3A(ACoAABdOvJsBgN8WGqnCV4ALIiwbXc50Dn61pWc%2C1588575931715)&section=education%3A391015753&treasuryCount=2&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bd%2FoAC%2FdKRCqW6wv%2B11ynwA%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-treasury_thumbnail_cell",
@@ -151,14 +153,18 @@ education.display = function() {
         var formattedschoolMajors = HTMLschoolMajor.replace(data, school.majors);
         var formattedcoursePeriod = HTMLcoursePeriod.replace(data, school.period);
         var formattedschoolLocation = HTMLschoolLocation.replace(data, school.location);
-        var formattededInfo = formattedschoolName + formattedcourseName + formattedschoolMajors + formattedcoursePeriod + formattedschoolLocation;
-        $(".education-entry:last").append(formattededInfo);
+        var formattededschoolInfo = formattedschoolName + formattedcourseName + formattedschoolMajors+ formattedschoolLocation + formattedcoursePeriod;
+        $(".education-entry:last").prepend(formattededschoolInfo);
         if(school.accomplishment.length > 0 ){
 			for(var i=0;i<school.accomplishment.length;i++){
         		var formattedcourseAccomplishment = HTMLcourseAccomplishment.replace(data, school.accomplishment[i]);
         		$(".education-entry:last").append(formattedcourseAccomplishment);
         	}
         }
+        var formattedcoursereportLink = HTMLcoursereportLink.replace(data, school.reportLink);
+        var formattedcoursereportLink2 = HTMLcoursereportLink2.replace(data, school.reportLink2);
+        var formattededreportInfo=formattedcoursereportLink+formattedcoursereportLink2;
+        $(".education-entry:last").append(formattededreportInfo);
     });
 
     /*// Online classes
@@ -276,13 +282,12 @@ project.display = function() {
     project.projects.forEach(function(proj) {
         $("#projects").append(HTMLprojectStart);
         var formattedprojectName = HTMLprojectName.replace(data, proj.projectName);
-        $(".project-entry:last").append(formattedprojectName);
         var formattedprojectCategory = HTMLprojectCategory.replace(data, proj.projectCategory);
-        $(".project-entry:last").append(formattedprojectCategory);
         var formattedprojectPeriod = HTMLprojectPeriod.replace(data, proj.period);
-        $(".project-entry:last").append(formattedprojectPeriod);
         var formattedprojectDetail = HTMLprojectDetail.replace(data, proj.detail);
-        $(".project-entry:last").append(formattedprojectDetail);
+        var formattedprojectLink = HTMLprojectLink.replace(data, proj.projectLink);
+        var formattededprojectInfo = formattedprojectName+formattedprojectCategory+formattedprojectPeriod+formattedprojectDetail+formattedprojectLink;
+        $(".project-entry:last").prepend(formattededprojectInfo);
         /*project.images.forEach(function(image){
             var formattedprojectImage = HTMLprojectImage.replace(data, project.images);
             $(".project-entry:last").append(formattedprojectImage);

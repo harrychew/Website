@@ -38,27 +38,33 @@ var HTMLworkPosition = ' - %data%</a>';
 var HTMLworkPeriod = '<div class="date-text"><b>%data%</b></div>';
 var HTMLworkLocation = '<div class="location-text"><b>%data%<b></div>';
 var HTMLworkResponsibility = '<br><div class="date-text">%data%</div>';
+var HTMLworkreportLink = '<br><a style="font-size:15px" href="%data%">Report</a>';
 
-var HTMLprojectStart = '<div class="project-entry"></div><br>';
-var HTMLprojectName = '<a href="#">%data%</a>';
-var HTMLprojectCategory= '<div class="date-text"><b>%data%</b></div><br>';
-var HTMLprojectPeriod = '<div class="date-text"><b>%data%</b></div><br>';
-var HTMLprojectDetail = '<div class="date-text">%data%</div><br>';
-/*var HTMLprojectImage = '<img src="%data%">';*/
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLcourseName = ' -- %data%</a>';
-var HTMLschoolMajor = '<div class="date-text"><b>Major: %data%</b></div><br>';
-var HTMLcoursePeriod = '<div class="date-text"><b>%data%</b></div>';
 var HTMLschoolLocation = '<div class="location-text"><b>%data%</b></div>';
-var HTMLcourseAccomplishment = '<br><div class="date-text">%data%</div>';
+var HTMLschoolMajor = '<div class="date-text"><b>Major: %data%</b></div><br>';
+var HTMLcoursePeriod = '<div class="date-text"><b>%data%</b></div><br>';
+var HTMLcourseAccomplishment = '<div class="date-text">%data%</div><br>';
+var HTMLcoursereportLink = '<a style="font-size:15px" href="%data%">Report</a>';
+var HTMLcoursereportLink2 = '<a style="font-size:15px" href="%data%">Report2</a>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+/*var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
+*/
+var HTMLprojectStart = '<div class="project-entry"></div><br>';
+var HTMLprojectName = '<a href="#">%data%</a>';
+var HTMLprojectCategory= '<div class="date-text"><b>%data%</b></div><br>';
+var HTMLprojectPeriod = '<div class="date-text"><b>%data%</b></div><br>';
+var HTMLprojectDetail = '<div class="date-text">%data%</div>';
+var HTMLprojectLink = '<br><a style="font-size:15px" href="%data%">Go to Project</a>';
+/*var HTMLprojectImage = '<img src="%data%">';*/
+
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
