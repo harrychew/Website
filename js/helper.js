@@ -32,25 +32,27 @@ var HTMLcomputingskillsStart = '<div><h3 id="skills-h3">Computing Skills:</h3><u
 var HTMLcomputingskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 
-var HTMLworkStart = '<div class="work-entry"></div>';
+var HTMLworkStart = '<div class="work-entry"></div><br>';
 var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkPosition = ' - %data%</a>';
-var HTMLworkPeriod = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkResponsibility = '<li>%data%</li>';
+var HTMLworkPeriod = '<div class="date-text"><b>%data%</b></div>';
+var HTMLworkLocation = '<div class="location-text"><b>%data%<b></div>';
+var HTMLworkResponsibility = '<br><div class="date-text">%data%</div>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectStart = '<div class="project-entry"></div><br>';
+var HTMLprojectName = '<a href="#">%data%</a>';
+var HTMLprojectCategory= '<div class="date-text"><b>%data%</b></div><br>';
+var HTMLprojectPeriod = '<div class="date-text"><b>%data%</b></div><br>';
+var HTMLprojectDetail = '<div class="date-text">%data%</div><br>';
+/*var HTMLprojectImage = '<img src="%data%">';*/
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLcourseName = ' -- %data%</a>';
+var HTMLschoolMajor = '<div class="date-text"><b>Major: %data%</b></div><br>';
+var HTMLcoursePeriod = '<div class="date-text"><b>%data%</b></div>';
+var HTMLschoolLocation = '<div class="location-text"><b>%data%</b></div>';
+var HTMLcourseAccomplishment = '<br><div class="date-text">%data%</div>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';

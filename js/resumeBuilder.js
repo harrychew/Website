@@ -99,8 +99,8 @@ work.display = function() {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace(data, company.employer);
         var formattedPosition = HTMLworkPosition.replace(data, company.position);
-        var formattedworkPeriod = HTMLworkPeriod.replace(data, company.period);
         var formattedworkLocation = HTMLworkLocation.replace(data, company.location);
+        var formattedworkPeriod = HTMLworkPeriod.replace(data, company.period);
         var formattedEmployerInfo = formattedEmployer + formattedPosition + formattedworkPeriod + formattedworkLocation;
         $(".work-entry:last").prepend(formattedEmployerInfo);
         if(company.responsibility.length > 0 ){
@@ -120,8 +120,10 @@ work.display = function() {
 var education = {
 	"institutions":[
 		{
-			"courseName":"Bachelor of Information Technology (Hons.) Security Technology",
+			"courseName":"Bachelor of Information Technology (Hons.)",
+			"majors":"Security Technology",
 			"university":"Multimedia University, Melaka, Malaysia",
+			"location":"Melaka,Malaysia",
 			"period":"June 2016–June 2020",
 			"accomplishment":[
 			"GPA: 4.0, CGPA: 3.99",
@@ -138,6 +140,39 @@ var education = {
 		}
 	]
 	
+};
+
+education.display = function() {
+    education.institutions.forEach(function(school) {
+        $("#education").append(HTMLschoolStart);
+
+        var formattedschoolName = HTMLschoolName.replace(data, school.university);
+        var formattedcourseName = HTMLcourseName.replace(data, school.courseName);
+        var formattedschoolMajors = HTMLschoolMajor.replace(data, school.majors);
+        var formattedcoursePeriod = HTMLcoursePeriod.replace(data, school.period);
+        var formattedschoolLocation = HTMLschoolLocation.replace(data, school.location);
+        var formattededInfo = formattedschoolName + formattedcourseName + formattedschoolMajors + formattedcoursePeriod + formattedschoolLocation;
+        $(".education-entry:last").append(formattededInfo);
+        if(school.accomplishment.length > 0 ){
+			for(var i=0;i<school.accomplishment.length;i++){
+        		var formattedcourseAccomplishment = HTMLcourseAccomplishment.replace(data, school.accomplishment[i]);
+        		$(".education-entry:last").append(formattedcourseAccomplishment);
+        	}
+        }
+    });
+
+    /*// Online classes
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append(HTMLschoolStart);
+    education.onlineCourses.forEach(function(course) {
+
+        var formattedonlineTitle = HTMLonlineTitle.replace(data, course.title);
+        var formattedonlineSchool = HTMLonlineSchool.replace(data, course.school);
+        var formattedonlineDates = HTMLonlineDates.replace(data, course.dates);
+        var formattedonlineURL = HTMLonlineURL.replace(data, course.url);
+        var formattedonlineInfo = formattedonlineTitle + formattedonlineSchool + formattedonlineDates + formattedonlineURL;
+        $(".education-entry:last").append(formattedonlineInfo);
+    });*/
 };
 var proj_cat=[
 	"Course Final Year Project",
@@ -236,6 +271,25 @@ var project = {
 	]
 		
 };
+
+project.display = function() {
+    project.projects.forEach(function(proj) {
+        $("#projects").append(HTMLprojectStart);
+        var formattedprojectName = HTMLprojectName.replace(data, proj.projectName);
+        $(".project-entry:last").append(formattedprojectName);
+        var formattedprojectCategory = HTMLprojectCategory.replace(data, proj.projectCategory);
+        $(".project-entry:last").append(formattedprojectCategory);
+        var formattedprojectPeriod = HTMLprojectPeriod.replace(data, proj.period);
+        $(".project-entry:last").append(formattedprojectPeriod);
+        var formattedprojectDetail = HTMLprojectDetail.replace(data, proj.detail);
+        $(".project-entry:last").append(formattedprojectDetail);
+        /*project.images.forEach(function(image){
+            var formattedprojectImage = HTMLprojectImage.replace(data, project.images);
+            $(".project-entry:last").append(formattedprojectImage);
+        });*/
+
+    });
+};
 /*var html = "<script src='http://hackyourwebsite.com/eviljavascript.js'></script>";
 
 var charEscape = function(_html) {
@@ -250,7 +304,8 @@ console.log(charEscape(html));*/
 
 bio.display();
 work.display();
-
+education.display();
+project.display();
   
 
 
